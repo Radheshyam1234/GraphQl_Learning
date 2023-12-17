@@ -6,16 +6,16 @@
 export const users = [
   {
     id: "23131",
-    firstName: "mukesh",
+    firstName: "Radheshyam",
     lastName: "kumar",
-    email: "mukesh@mukeshkumar.com",
+    email: "radheshyam@gmail.com",
     password: "12345",
   },
   {
     id: "4232",
-    firstName: "suresh",
+    firstName: "Rocky",
     lastName: "sharma",
-    email: "suresh@sureshsharma.com",
+    email: "rocky@gmail.com",
     password: "12346",
   },
 ];
