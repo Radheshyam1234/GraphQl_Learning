@@ -8,7 +8,8 @@ const typeDefs = gql`
     users: [User]
     user(id: ID): User
     quotes: [Quote]
-    quote(by: ID): [Quote]
+    iquotes(by: ID): [Quote]
+    quotesById(id: ID): Quote
   }
 
   type User {
@@ -31,7 +32,8 @@ const resolvers = {
     users: () => users,
     user: (_, { id }) => users.find((u) => u.id === id),
     quotes: () => quotes,
-    quote: (_, { by }) => quotes.filter((q) => q.by === by),
+    iquotes: (_, { by }) => quotes.filter((q) => q.by === by),
+    quotesById: (_, { id }) => quotes.find((q) => q.id === id),
   },
   User: {
     quotes: (u) => quotes.filter((quote) => quote.by === u.id),

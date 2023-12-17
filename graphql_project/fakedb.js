@@ -29,14 +29,17 @@ collection/Table - Quotes
 
 export const quotes = [
   {
+    id: "11",
     name: "I turn coffee into code",
     by: "23131",
   },
   {
+    id: "22",
     name: "I am another quote",
     by: "23131",
   },
   {
+    id: "33",
     name: "If it works dont touch it",
     by: "4232",
   },
