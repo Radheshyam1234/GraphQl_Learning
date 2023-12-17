@@ -14,10 +14,12 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
+    quotes: [Quote]
   }
   type Quote {
     by: ID
     name: String
+    user: User
   }
 `;
 
@@ -26,6 +28,12 @@ const resolvers = {
     greet: () => "Hello Radheshyam",
     users: () => users,
     quotes: () => quotes,
+  },
+  User: {
+    quotes: (u) => quotes.filter((quote) => quote.by === u.id),
+  },
+  Quote: {
+    user: (q) => users.find((u) => u.id === q.by),
   },
 };
 
